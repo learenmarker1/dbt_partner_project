@@ -7,3 +7,4 @@ sources:
     tables:
      - name: bike_data
      - name: station_info
+     - name: stations_status_table
