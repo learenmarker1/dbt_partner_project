@@ -1,4 +1,5 @@
-Select
+with station_info as(
+    Select
     value:station_id::INTEGER as station_id,
     value:name::STRING as name,
     value:short_name::STRING as short_name,
@@ -9,5 +10,8 @@ Select
     value:capacity::INTEGER as capacity,
     value:rental_url::STRING as rental_url,
     value:eightd_has_key_dispenser::STRING as eightd_has_key_dispenser
-from dbt_partner_case.raw.station_info
-, lateral flatten( input => src:data:stations );
+from {{source('raw_source','station_info')}}
+, lateral flatten( input => src:data:stations )
+)
+
+select * from station_info

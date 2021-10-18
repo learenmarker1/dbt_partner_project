@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: latest_station_status
+    columns: 
+      - name: station_identity
+        tests:
+          - unique
+          - not_null
+      - name: station_status
+        tests:
+          - accepted_values:
+              values: ['active','out_of_service']

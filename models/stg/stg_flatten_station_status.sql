@@ -1,4 +1,5 @@
-Select
+with station_status as(
+    Select
     value:station_id::INTEGER as station_id,
     value:station_status::STRING as station_status,
     value:num_ebikes_available::INTEGER as available_ebikes,
@@ -14,3 +15,5 @@ Select
     value:eightd_has_key_dispenser::STRING as eightd_has_key_dispenser
 from {{source('raw_source','stations_status_table')}}
 , lateral flatten( input => station_status_raw:data:stations )
+)
+select * from station_status

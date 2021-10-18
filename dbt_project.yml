@@ -30,3 +30,5 @@ models:
           materialized: view
       stg:
           materialized: view
+      marts:
+          materialized: table
