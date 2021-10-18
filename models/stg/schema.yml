@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_source
+    database: dbt_partner_case
+    schema: raw
+    tables:
+     - name: bike_data
+     - name: station_info
