@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_source
+    description: Trip data and station data from Citibike nyc. 
+    database: dbt_partner_case
+    schema: raw
+    tables:
+     - name: bike_data
+       description: Raw trip data.
+     - name: station_info
+       description: Raw information data for stations.
+     - name: stations_status_table
+       description: Raw data on status for every station.
+       loaded_at_field: '(to_timestamp(to_char(station_status_raw:last_reported)))'
+       freshness:
+         warn_after: {count: 24, period: day}
+         error_after: {count: 30, period: day}

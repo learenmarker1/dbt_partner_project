@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_flatten_station_status
+    columns: 
+      - name: station_status
+        tests:
+          - accepted_values:
+              values: ['active','out_of_service']
+  - name: stg_flatten_station_info
+    columns:
+      - name: station_id
+        tests:
+        - unique
+        - not_null
