@@ -1,15 +1,25 @@
 version: 2
 
 models:
+  - name: stg_flatten_station_info
+    description: Flattens json to view
+    columns:
+      - name: station_id
+        tests:
+          - unique
+          - not_null
+
   - name: stg_flatten_station_status
+    description: Flattens json to view
     columns: 
       - name: station_status
         tests:
           - accepted_values:
               values: ['active','out_of_service']
-  - name: stg_flatten_station_info
+
+  - name: stg_bike_data
     columns:
-      - name: station_id
+      - name: gender
         tests:
-        - unique
-        - not_null
+          - accepted_values:
+              values: ['0','1','2']

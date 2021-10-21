@@ -4,7 +4,7 @@
 
 select 
     station_id,
-    name,
+    name as station_name,
     short_name,
     lat,
     lon,

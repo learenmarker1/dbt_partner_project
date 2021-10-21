@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: latest_station_status
+    description: Checks latest reported status for each station
     columns: 
       - name: station_identity
+        description: Primary key referencing the station information table
         tests:
           - unique
           - not_null

@@ -1,6 +1,6 @@
 with bike_data as(
     select
-        tripduration,
+        tripduration/ 60 as trip_duration, --time in minutes from seconds,
         starttime,
         stoptime,
         "start station id" as start_id,

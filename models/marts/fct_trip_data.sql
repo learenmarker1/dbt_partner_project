@@ -3,9 +3,6 @@
 )}}
 
 select    
-    tripduration,
-    starttime,
-    stoptime,
     start_id,
     start_name,
     start_lat,
@@ -14,6 +11,9 @@ select
     end_name,
     end_lat,
     end_lon,
+    starttime,
+    stoptime,    
+    trip_duration,
     bikeid,
     usertype, 
     "birth year", 

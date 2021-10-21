@@ -9,10 +9,6 @@ sources:
      - name: bike_data
        description: Raw trip data.
      - name: station_info
-       description: Raw information data for stations.
+       description: Raw information data for stations. JSON
      - name: stations_status_table
-       description: Raw data on status for every station.
-       loaded_at_field: '(to_timestamp(to_char(station_status_raw:last_reported)))'
-       freshness:
-         warn_after: {count: 24, period: day}
-         error_after: {count: 30, period: day}
+       description: Raw data on status for every station. JSON
