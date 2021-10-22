@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fct_trip_data
+    description: facts table for trip data 
+  
+  - name: dim_station_info
+    description: Dimensions table for information about stations
+    columns:
+      - name: station_id
+        description: Primary key of the station information table
+
+  - name: fct_station_status
+    description: '{{ doc ("status") }}'

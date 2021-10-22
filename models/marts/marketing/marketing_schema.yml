@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: subscriber_trip_data
+    description: Data over trips by subscribers only.
+
+  - name: monthly_user_distr
+    description: Table over the distribution of rides made by subscribers vs customers updated monthly. Subscribers are divided into male and female subscribers.
