@@ -5,7 +5,6 @@
 select 
     station_id,
     name as station_name,
-    short_name,
     lat,
     lon,
     region_id,

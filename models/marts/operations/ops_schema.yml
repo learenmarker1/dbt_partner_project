@@ -14,6 +14,4 @@ models:
           - accepted_values:
               values: ['active','out_of_service']
 
-  - name: bike_availability_vs_capacity
-    description: Table for comparing reported capacity information in station_info with capacity according to latest station status. Can be used to see which stations' information is not up to date.
 

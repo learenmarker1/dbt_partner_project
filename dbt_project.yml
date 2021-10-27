@@ -25,5 +25,6 @@ models:
   solita_bike_status:
       stg:
           materialized: view
+      
       marts:
           materialized: table
