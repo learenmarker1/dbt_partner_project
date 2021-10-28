@@ -13,7 +13,7 @@ select
     end_lon,
     starttime,
     stoptime,    
-    trip_duration,
+    trip_duration/ 60 as trip_duration, --trip time in minutes
     bikeid,
     usertype, 
     "birth year", 

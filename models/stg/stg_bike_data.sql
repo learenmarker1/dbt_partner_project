@@ -1,5 +1,5 @@
 select
-    tripduration/ 60 as trip_duration, --time in minutes from seconds,
+    tripduration,
     starttime,
     stoptime,
     "start station id" as start_id,
